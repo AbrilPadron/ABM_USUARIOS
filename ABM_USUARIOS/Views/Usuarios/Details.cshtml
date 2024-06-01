@@ -1,0 +1,80 @@
+﻿@model ABM_USUARIOS.Models.Usuario
+
+@{
+    ViewData["Title"] = "Detalles del Usuario";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center">Detalles del Usuario</h2>
+    <hr />
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Usuario1)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Usuario1)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Contraseña)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Contraseña)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Apellido)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Direccion)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Direccion)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FechaNac)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.FechaNac)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Telefono)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Ciudad)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Ciudad)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.CodPostal)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.CodPostal)
+                </dd>
+            </dl>
+            <div class="form-group text-center">
+                <a asp-action="Edit" asp-route-id="@Model?.IdUsuario" class="btn btn-primary btn-lg">Editar</a>
+                <a asp-action="Index" class="btn btn-secondary btn-lg ms-3">Volver a la Lista</a>
+            </div>
+        </div>
+    </div>
+</div>

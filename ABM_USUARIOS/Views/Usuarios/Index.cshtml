@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ABM_USUARIOS.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center">Lista de Usuarios</h2>
+    <div class="text-end mb-3">
+        <a asp-action="Create" class="btn btn-primary">Agregar Usuario</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-violet text-white">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Usuario1)</th>
+                    <th>@Html.DisplayNameFor(model => model.Contraseña)</th>
+                    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                    <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+                    <th>@Html.DisplayNameFor(model => model.Direccion)</th>
+                    <th>@Html.DisplayNameFor(model => model.FechaNac)</th>
+                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+                    <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                    <th>@Html.DisplayNameFor(model => model.Ciudad)</th>
+                    <th>@Html.DisplayNameFor(model => model.CodPostal)</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Usuario1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Contraseña)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Direccion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.FechaNac)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Ciudad)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CodPostal)</td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@item.IdUsuario" class="btn btn-warning btn-sm">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.IdUsuario" class="btn btn-info btn-sm">Detalles</a>
+                            <a asp-action="Delete" asp-route-id="@item.IdUsuario" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
